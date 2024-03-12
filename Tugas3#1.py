@@ -1,5 +1,5 @@
 # buat data nested dictionary 
-# username password minimal 10 data
+# username password minimal 10 data mahasiswa
 data = {
     '07352311151' : {'nama': 'Isra', 'password': '07352311151', 'role': 'Mahasiswa'},
     '07352311152' : {'nama': 'Sagri', 'password': '07352311152', 'role': 'Mahasiswa'},
@@ -12,7 +12,6 @@ data = {
     '07352311159' : {'nama': 'Salwan', 'password': '07352311159', 'role': 'Mahasiswa'},
     '07352311160' : {'nama': 'Yasmir', 'password': '07352311160', 'role': 'Mahasiswa'}
 }
-
 # buat sistem login
 welcome = '''
 ==================================================
@@ -28,7 +27,7 @@ password = input('Masukkan password: ')
  
 if username in data and data[username]['password'] == password :
     print('\n=========================================')
-    print('Nama\t:',data[username]['nama'],data[username]['role'])
+    print('Nama\t:',data[username]['nama'])
     print('NPM\t:',username)
     print('Roles\t:',data[username]['role'])
     print('=========================================')
