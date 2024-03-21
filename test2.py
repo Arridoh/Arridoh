@@ -1,8 +1,8 @@
 nama = input('Masukkan username: ')
 password = input('Masukkan password: ')
 
-username = 'rido'
-sandi = '12345'
+username = '07352311001'
+sandi = '07352311001'
 
 if nama == username and password == sandi:
     print('\nAnda berhasil login!!')
