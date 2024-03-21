@@ -1,50 +1,30 @@
-nama = input('Masukkan username: ')
-password = input('Masukkan password: ')
+Absence = int(input('Masukkan Jumlah Kehadiran: '))
+Jml_tugas = int(input('Masukkan Jumlah Tugas: '))
+TotalTugas = 0
+for i in range(Jml_tugas):
+    tugas = int(input(f'Masukkan Nilai Tugas {i+1}: '))
+    TotalTugas += tugas
+Uts = int(input('Masukkan Nilai UTS: '))
+Uas = int(input('Masukkan Nilai UAS: '))
 
-username = 'rido'
-sandi = '12345'
+kehadiran = (Absence/16)*100
+rata2_tugas = TotalTugas/Jml_tugas
+total_nilai = (kehadiran + rata2_tugas + Uts + Uas)/4
 
-if nama == username and password == sandi:
-    print('\nAnda berhasil login!!')
-    print('Pilih matakuliah anda:')
-    print('1. Matematika Diskrit')
-    print('2. Aljabar Linear')
-    print('3. Logika matematika')
-    print('4. Dasar Pemrograman')
-    matakuliah = int(input('Masukkan pilihan (1-4): '))
-    print('')
-    if matakuliah == 1:
-        Dosen = 'Pak Syarifuddin'
-        matakuliah = 'Matematika Diskrit'
-        print('Berikut informasi anda:')    
-        print('Username\t: ', nama)
-        print('Matakuliah\t: ', matakuliah)
-        print('Dosen pengampuh\t: ', Dosen)
-
-    elif matakuliah == 2:
-        Dosen = 'Ibu Aisjah'
-        matakuliah = 'Aljabar Linear'
-        print('Berikut informasi anda:')
-        print('Username\t: ', nama)
-        print('Matakuliah\t: ', matakuliah)
-        print('Dosen pengampuh\t: ', Dosen)
-    
-    elif matakuliah == 3:
-        Dosen = 'Pak Amal'
-        matakuliah = 'Logika Matematika'
-        print('Berikut informasi anda:')
-        print('Username\t: ', nama)
-        print('Matakuliah\t: ', matakuliah)
-        print('Dosen pengampuh\t: ', Dosen)
-
-    elif matakuliah == 4:
-        Dosen = 'Pak Yasir'
-        matakuliah = 'Dasar Pemrograman'
-        print('Berikut informasi anda:')    
-        print('Username\t: ', nama)
-        print('Matakuliah\t: ', matakuliah)
-        print('Dosen pengampuh\t: ', Dosen)
-    else:
-        print('Matakuliah tidak tersedia')
+if total_nilai >= 90:
+    print("Nilai anda: ", total_nilai)
+    print("Selamat anda lulus dengan predikat : A")
+elif total_nilai >=80:
+    print("Nilai anda: ", total_nilai)
+    print("Selamat anda lulus dengan predikat : B")
+elif total_nilai >=70:
+    print("Nilai anda: ", total_nilai)
+    print("Selamat anda lulus dengan predikat : C")
+elif total_nilai >=60:
+    print("Nilai anda: ", total_nilai)
+    print("Selamat anda lulus dengan predikat : D")
+elif total_nilai > 0:
+    print("Nilai anda: ", total_nilai)
+    print("Selamat anda lulus dengan predikat : E")
 else:
-    print('Username atau Password salah')
+    print('Maaf nilai anda tidak terbaca')
