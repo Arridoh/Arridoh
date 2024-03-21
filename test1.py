@@ -1,30 +1,50 @@
-kehadiran = int(input('masukkan kehadiran (1-16): '))
-jml_tugas = int(input('Masukkan banyak tugas: '))
+nama = input('Masukkan username: ')
+password = input('Masukkan password: ')
 
-total_tugas = 0
-for i in range(jml_tugas):
-    tugas = int(input(f'Masukkan niali tugas {i+1}: '))
-    total_tugas += tugas
+username = 'rido'
+sandi = '12345'
 
-nilaiUTS = int(input('Masukkan nilai UTS: '))
-nilaiUAS = int(input('Masukkan nilai UAS: '))
+if nama == username and password == sandi:
+    print('\nAnda berhasil login!!')
+    print('Pilih matakuliah anda:')
+    print('1. Matematika Diskrit')
+    print('2. Aljabar Linear')
+    print('3. Logika matematika')
+    print('4. Dasar Pemrograman')
+    matakuliah = int(input('Masukkan pilihan (1-4): '))
+    print('')
+    if matakuliah == 1:
+        Dosen = 'Pak Syarifuddin'
+        matakuliah = 'Matematika Diskrit'
+        print('Berikut informasi anda:')    
+        print('Username\t: ', nama)
+        print('Matakuliah\t: ', matakuliah)
+        print('Dosen pengampuh\t: ', Dosen)
 
-kehadiran = (kehadiran/16)*100
-total_tugas = total_tugas/jml_tugas
-total_nilai = int((kehadiran + total_tugas + nilaiUTS + nilaiUAS)/4)
-print("")
-if total_nilai >= 90:
-    print('Nilai anda:', total_nilai)
-    print('Predikat anda: A')
-elif total_nilai >= 80:
-    print('Nilai anda:', total_nilai)
-    print('Predikat anda: B')
-elif total_nilai >= 70:
-    print('Nilai anda:', total_nilai)
-    print('Predikat anda: C')
-elif total_nilai >= 60:
-    print('Nilai anda:', total_nilai)
-    print('Predikat anda: D')
+    elif matakuliah == 2:
+        Dosen = 'Ibu Aisjah'
+        matakuliah = 'Aljabar Linear'
+        print('Berikut informasi anda:')
+        print('Username\t: ', nama)
+        print('Matakuliah\t: ', matakuliah)
+        print('Dosen pengampuh\t: ', Dosen)
+    
+    elif matakuliah == 3:
+        Dosen = 'Pak Amal'
+        matakuliah = 'Logika Matematika'
+        print('Berikut informasi anda:')
+        print('Username\t: ', nama)
+        print('Matakuliah\t: ', matakuliah)
+        print('Dosen pengampuh\t: ', Dosen)
+
+    elif matakuliah == 4:
+        Dosen = 'Pak Yasir'
+        matakuliah = 'Dasar Pemrograman'
+        print('Berikut informasi anda:')    
+        print('Username\t: ', nama)
+        print('Matakuliah\t: ', matakuliah)
+        print('Dosen pengampuh\t: ', Dosen)
+    else:
+        print('Matakuliah tidak tersedia')
 else:
-    print('Nilai anda:', total_nilai)    
-    print('Predikat anda: E')
+    print('Username atau Password salah')
