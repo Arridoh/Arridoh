@@ -35,10 +35,3 @@ if matakuliah in nama_mk:
         print(item, '\t: ', nama_mk[matakuliah][item])
 else:
     print('Maaf kode matakuliah yang anda masukkan tidak sesuai')
-
-
-# pr_A = 4.00
-# pr_AB = 3.50
-# pr_B = 3.00
-# pr_BC = 2.50
-# pr_E = 0
