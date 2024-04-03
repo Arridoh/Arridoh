@@ -13,7 +13,7 @@ kursi = {'A': ['1', '2', '3', '4', '5', '6', '7', '8'],
          'B': ['1', '2', '3', '4', '5', '6', '7', '8'],
          'C': ['1', '2', '3', '4', '5', '6', '7', '8'],}
 namakelompok = ['Nurhasna Hi. Saleh','M. Arridoh Fuad','Muhammad Yasmir Sanaky','Nurhasna Majid','Riyadh Rafael Hanafi','Muhammad Agung','Mega Asriyani','Putri Jumiana Idris','Mirnasari Ramatin','Fauzan Mansur','Nurdalifa Marzuki']
-npmkelompok = ['07352311167','07352311153','07352311160','07352311168','07352311173','07352311156','07352311155','','','07352311180','07352311166']
+npmkelompok = ['07352311167','07352311153','07352311160','07352311168','07352311173','07352311156','07352311155','07352111007','07352111022','07352311180','07352311166']
 
 def garis():
     print('==============================')
@@ -178,13 +178,13 @@ while True:
                                     garis()
                                 print('Terimakasih, selamat menonton!')
                                 garis()
-                                print('Tekan enter untuk lanjut')
+                                print('Tekan enter untuk lanjut: ')
                                 msvcrt.getch()
                                 print('')
                                 break
                             else:
                                 print('Baiklah, terimakasih sudah singgah')
-                                print('Tekan enter untuk lanjut')
+                                print('Tekan enter untuk lanjut: ')
                                 msvcrt.getch()
                                 print('')
                                 break
@@ -205,14 +205,14 @@ while True:
                                 garis()
                             print('Terimakasih, selamat menonton!')
                             garis()
-                            print('Tekan enter untuk lanjut')
+                            print('Tekan enter untuk lanjut: ')
                             msvcrt.getch()
                             print('')
                             break                                                       
                     else:
                         print('Terimakasih sudah singgah')
                         garis()
-                        print('Tekan enter untuk lanjut')
+                        print('Tekan enter untuk lanjut: ')
                         msvcrt.getch()
                         print('')
                         break
@@ -231,6 +231,10 @@ while True:
             print('Hari :', haridibeli[i])
             print('Harga tiket: ', hargatiketdibeli[i])
             garis()
+            print('Tekan enter untuk lanjut: ')
+            msvcrt.getch()
+        print('Tekan enter untuk kembali: ')
+        msvcrt.getch()
         print('')
     elif pilihan == '3' or pilihan.lower() == 'lihat nama kelompok':
         print('')
@@ -239,6 +243,8 @@ while True:
         for i in range(len(namakelompok)):
             print(f'{i+1}. Nama: {namakelompok[i]}')
             print(f'   NPM : {npmkelompok[i]}')
+        print(f'Tekan enter untuk kembali')
+        msvcrt.getch()
         print('')
     elif pilihan == '4' or pilihan.lower() == 'exit':
         garis()
