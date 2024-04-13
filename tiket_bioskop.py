@@ -3,10 +3,10 @@ import datetime
 import msvcrt
 
 listfilm = {
-    'action':{'1':'Black Adam', '2': 'Star Wars', '3': 'Guardians of the Galaxy', '4': 'John Wick', '5': 'The Beekeper'},
-    'comedy':{'1': 'Kapan Kawin', '2': 'Orang Kaya Baru', '3': 'My Stupid Boss', '4': 'Agak Laen'},
-    'fantasy':{'1': 'The Chronicles of Narnia', '2': 'Wonka', '3': 'Cinderella', '4': 'Beauty and the Beast'},
-    'thriller':{'1': 'Parasite', '2': 'Joker', '3': 'Bird Box', '4': 'Plane', '5': 'Oppenheimer'},
+    'Action':{'1':'Black Adam', '2': 'Star Wars', '3': 'Guardians of the Galaxy', '4': 'John Wick', '5': 'The Beekeper'},
+    'Comedy':{'1': 'Kapan Kawin', '2': 'Orang Kaya Baru', '3': 'My Stupid Boss', '4': 'Agak Laen'},
+    'Fantasy':{'1': 'The Chronicles of Narnia', '2': 'Wonka', '3': 'Cinderella', '4': 'Beauty and the Beast', '5': 'Fantastic Beast'},
+    'Thriller':{'1': 'Parasite', '2': 'Joker', '3': 'Bird Box', '4': 'Plane', '5': 'Oppenheimer'},
 }
 waktufilm = {'1': '08:00 WIT - 09:50 WIT','2': '14:30 WIT - 16:20 WIT','3': '21:00 WIT - 22:50 WIT',}
 kursi = {'A': ['1', '2', '3', '4', '5', '6', '7', '8'],
@@ -44,28 +44,29 @@ while True:
     pilihan = input('Apa yang ingin anda lakukan?: ')
     if pilihan == '1' or pilihan.lower() == 'pesan tiket':
         while True:
-            print('Pilih genre film:')
+            print('\nPilih genre film:')
             garis()
             print('Genre film:')
             for genre, judul in listfilm.items():
                 print(f'--> {genre}')
             garis()
             pilih = input('Pilih genre Film: ')
+            pilih = pilih.capitalize()
             print('')
-            if pilih.lower() in listfilm:
+            if pilih in listfilm:
                 break
             else:
                 print('Harap masukkan keyword dengan benar!!')
                 print('')
         for genre, judul in listfilm.items():
-            if pilih.lower() in listfilm and pilih.lower() != genre:
+            if pilih in listfilm and pilih != genre:
                 continue
-            elif pilih.lower() == genre:
+            elif pilih == genre:
                 juduldipilih = judul
                 while True:
                     print('Silahkan pilih film:')
                     garis()
-                    print(f'Daftar film {pilih.lower()}: ')
+                    print(f'Daftar film {pilih}: ')
                     for number, film in judul.items():
                         print(f'{number}. {film}')
                     garis()    
@@ -95,7 +96,7 @@ while True:
                 continue
             elif jamtayang == x:
                 while True:
-                    print('Detail film: ')
+                    print('\nDetail film: ')
                     garis()
                     print(f'Nama film\t: {filmdipilih}')
                     print(f'Genre film\t: {pilih}')
@@ -133,6 +134,7 @@ while True:
                                 garis()    
                                 while True:
                                     pilihbaris = input(f'Masukkan row (A-{baris}): ')
+                                    pilihbaris = pilihbaris.upper()
                                     pilihkolom = input(f'Masukkan seat (1-{len(kolom)}): ')
                                     if pilihbaris in barisdibeli and pilihkolom in kolomdibeli:
                                         print('Maaf Kursi telah dipesan')
@@ -178,13 +180,13 @@ while True:
                                     garis()
                                 print('Terimakasih, selamat menonton!')
                                 garis()
-                                print('Tekan enter untuk lanjut: ')
+                                print('Tekan enter untuk lanjut ')
                                 msvcrt.getch()
                                 print('')
                                 break
                             else:
                                 print('Baiklah, terimakasih sudah singgah')
-                                print('Tekan enter untuk lanjut: ')
+                                print('Tekan enter untuk lanjut ')
                                 msvcrt.getch()
                                 print('')
                                 break
@@ -205,14 +207,14 @@ while True:
                                 garis()
                             print('Terimakasih, selamat menonton!')
                             garis()
-                            print('Tekan enter untuk lanjut: ')
+                            print('Tekan enter untuk lanjut ')
                             msvcrt.getch()
                             print('')
                             break                                                       
                     else:
                         print('Terimakasih sudah singgah')
                         garis()
-                        print('Tekan enter untuk lanjut: ')
+                        print('Tekan enter untuk lanjut ')
                         msvcrt.getch()
                         print('')
                         break
@@ -233,7 +235,7 @@ while True:
             garis()
             print('Tekan enter untuk lanjut: ')
             msvcrt.getch()
-        print('Tekan enter untuk kembali: ')
+        print('Tekan enter untuk kembali ')
         msvcrt.getch()
         print('')
     elif pilihan == '3' or pilihan.lower() == 'lihat nama kelompok':
