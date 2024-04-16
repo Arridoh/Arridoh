@@ -1,5 +1,8 @@
 import locale
+locale.setlocale(locale.LC_TIME, 'id_ID')
 import datetime
+tanggal = datetime.datetime.now()
+hari = tanggal.strftime('%A')
 import msvcrt
 
 listfilm = {
@@ -18,21 +21,17 @@ npmkelompok = ['07352311167','07352311153','07352311160','07352311168','07352311
 def garis():
     print('==============================')
 
-locale.setlocale(locale.LC_TIME, 'id_ID')
-tanggal = datetime.datetime.now()
-hari = tanggal.strftime('%A')
-
+tidakcukupumur = []
 namapembeli = []
 umurpembeli = []
-tidakcukupumur = []
 filmdibeli = []
-waktudibeli = []
 haridibeli = []
-hargatiketdibeli = []
+waktudibeli = []
 barisdibeli = []
 barisdisimpan = []
 kolomdibeli = []
 kolomdisimpan = []
+hargatiketdibeli = []
 
 while True:
     print('Selamat datang')
