@@ -126,7 +126,6 @@ while True:
                                 umurpembeli.remove(umur)
                                 tidakcukupumur.append(nama)
                                 print('Maaf anda tidak bisa membeli tiket')
-                                print('')
                             else:
                                 print('\nPilih tempat duduk anda:')
                                 for baris, kolom in kursi.items():
@@ -233,8 +232,6 @@ while True:
             print('Hari :', haridibeli[i])
             print('Harga tiket: ', hargatiketdibeli[i])
             garis()
-            print('Tekan enter untuk lanjut: ')
-            msvcrt.getch()
         print('Tekan enter untuk kembali ')
         msvcrt.getch()
         print('')
